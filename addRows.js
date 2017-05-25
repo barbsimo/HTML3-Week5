@@ -65,9 +65,17 @@ function showHives( ) {
         tr.append( td );
         td = $( '<td>' );
         td.text( beeHive.notes );
+        tr.append( td );     
+        td = $( '<td>' );
+        button = $( '<button type="button">' );
+        button.text( 'Edit' );
+        td.append( button );
+        //button.on( 'click', callEdit );
+        button = $( '<button type="button">' );
+        button.text( 'Delete' );
+        td.append( button );
         tr.append( td );
-        tr.append( editBtn);
-        tr.append( deleteBtn);
+       // button.on( 'click', callDelete );
         $('#beeHives').append( tr );
     } );
 
